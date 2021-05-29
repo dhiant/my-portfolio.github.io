@@ -1,0 +1,193 @@
+body {
+	margin: 0 auto;
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+/* CSS for navbar */
+#navbar {
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+#navbar ul {
+	list-style: none;
+	display: flex;
+	padding-top: 25px;
+}
+#navbar li {
+	margin-right: 70px;
+	font-size: 20px;
+}
+#navbar a {
+	display: block;
+	text-decoration: none;
+	color: #FF4500;
+	padding-right: 70px;
+	font-family: Arial,Helvetica,sans-serif;
+	letter-spacing: 0.7px;
+}
+
+/* CSS for welcome-section */
+#welcome-section {
+	width: 100%;
+	height: 230px;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#welcome-section h1 {
+	font-size: 30px;
+	font-family: -webkit-pictograph;
+}
+#welcome-section p {
+	margin-top: -10px;
+	font-size: 18px;
+	color: #FF4500;
+	letter-spacing: 2.5px;
+}
+
+/* CSS for Projects Section */
+#projects h1 {
+	max-width: 430px;
+	margin: 0 auto;
+	letter-spacing: 2px;
+	font-family: -webkit-pictograph;
+	text-align: center;
+}   
+
+/* CSS for divider line */   
+.divider {								/* minor cosmetics */
+	display: table; 
+	font-size: 24px; 
+	text-align: center; 
+	width: 75%; 						/* divider width */
+	margin: 40px auto;					/* spacing above/below */
+}
+.divider span { display: table-cell; position: relative; }
+.divider span:first-child, .divider span:last-child {
+	width: 50%;
+	top: 13px;							/* adjust vertical align */
+	-moz-background-size: 100% 2px; 	/* line width */
+	background-size: 100% 2px; 			/* line width */
+	background-position: 0 0, 0 100%;
+	background-repeat: no-repeat;
+}
+.divider span:first-child {				/* color changes in here */
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgb(247,91,0)));
+	background-image: -webkit-linear-gradient(180deg, transparent, rgb(255,69,0));
+	background-image: -moz-linear-gradient(180deg, transparent, rgb(255,69,0));
+	background-image: -o-linear-gradient(180deg, transparent, rgb(255,69,0));
+	background-image: linear-gradient(90deg, transparent, rgb(255,69,0));
+}
+.divider span:nth-child(2) {
+	color: #000; padding: 0px 5px; width: auto; white-space: nowrap;
+}
+.divider span:last-child {				/* color changes in here */
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000), to(transparent));
+	background-image: -webkit-linear-gradient(180deg, rgb(255,69,0), transparent);
+	background-image: -moz-linear-gradient(180deg, rgb(255,69,0), transparent);
+	background-image: -o-linear-gradient(180deg,rgb(255,69,0), transparent);
+	background-image: linear-gradient(90deg, rgb(255,69,0), transparent);
+}
+
+/* CSS for Projects Grid */
+.projects-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+	grid-template-rows: auto;
+	grid-gap: 20px;
+	width:100%;
+	max-width: 1200px;
+	margin:60px auto 0 auto;
+}
+.projects-grid img {
+	width: 100%;
+	height: auto;
+}
+.projects-grid a {
+	text-decoration: none;
+	color: black;
+}
+.projects-grid a :hover {
+	color: #FF4500;
+	font-size: 25px;
+}
+.img-container {
+	background: white;
+}
+.project-title {
+	text-align: center;
+	font-size: 19px;
+}
+
+/* CSS for contact Section */
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	/* max-width: 1231px; */
+	height: 80vh;
+}
+.contact-header h1 {
+	font-family: cursive;
+	font-size: 35px;
+	letter-spacing: 5px;
+}
+.contact-header p {
+	margin: -12px 0 0 0;
+	color: #FF4500;
+	font-family: cursive;
+}
+.contact-link ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 20px;
+}
+.contact-link li {
+	margin-right: 50px;
+	font-size: 20px;
+}
+.contact-link a {
+	font-size: 22px;
+	text-decoration: none;
+	color: black
+}
+.contact-link .fa {
+	padding: 1px 3px 0px 3px;
+	font-size: 19px;
+	margin-right: 4px;
+	width: 21px;
+	text-align: center;
+	border-radius: 5px;
+}
+.contact-link .fa-facebook {
+	background: black;
+	color: white;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+	opacity: 0.7;
+}
+.contact-link a:hover {
+	color: #FF4500;
+	font-size: 27px;
+}
+@media only screen and ( max-width: 800px) {
+	#navbar {
+		display: flex;
+		justify-content: flex-start;
+	}
+	#navbar li {
+		margin-right: 30px;
+	}
+	.contact-link {
+		margin-top: 45px;
+	}
+	.contact-link ul {
+		justify-content: center;
+	}
+}
